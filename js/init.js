@@ -17,11 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
   // Step 3: Initialize chess game and board
   initChessGame();
 
-  // Step 4: Show main menu after a brief loading period
+  // Step 4: Show main menu after loading animation completes
+  // Wait 3 seconds for the fill animation to complete (2.5s animation + 0.5s buffer)
   setTimeout(function() {
     hideLoadingScreen();
     showModal('mainMenuModal');
-  }, 1500);
+  }, 3000);
 
   console.log('Chess Application initialized successfully');
 });
